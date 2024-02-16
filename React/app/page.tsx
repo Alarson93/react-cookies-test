@@ -18,7 +18,9 @@ export default function Home() {
 }
 
 function createCookie() {
-  setCookie(null, "myCookie", Math.random().toString());
+  setCookie(null, "myCookie", Math.random().toString(), {
+    maxAge: 30 * 24 * 60 * 60,
+  });
 }
 
 function deleteCookie() {
