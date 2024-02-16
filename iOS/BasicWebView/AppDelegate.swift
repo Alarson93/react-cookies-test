@@ -1,8 +1,6 @@
 import UIKit
 import WebKit
 
-let cookiesToWatch = ["myCookie"]
-
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
