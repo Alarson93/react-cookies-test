@@ -10,6 +10,9 @@ import WebKit
 
 class ViewController: UIViewController {
 
+    var wkCookieWatcher: WKCookieWatcher!
+    var httpCookieWatcher: HTTPCookieWatcher!
+
     @IBOutlet var webView: WKWebView!
 
     override func viewDidLoad() {
@@ -18,6 +21,9 @@ class ViewController: UIViewController {
         let request = URLRequest(url: link)
         webView.load(request)
         webView.isInspectable = true
+
+        wkCookieWatcher = .init()
+        httpCookieWatcher = .init()
     }
 
 
